@@ -50,7 +50,8 @@
 
 \title{	
 \normalfont \normalsize 
-\textsc{Konrad Lorenz Fundación Universitaria} \\ [25pt] % Your university, school and/or department name(s)
+\includegraphics[width=60mm]{k}
+\textsc{\\} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
 \huge Cálculo Integral\\ % The assignment title
 \huge Taller: Sumatorias y Áreas
