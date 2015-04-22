@@ -12,6 +12,11 @@
 
 \usepackage{pstricks-add}
 \usepackage{pgfplots}
+\usepackage[pdf]{pstricks}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{update} 
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -59,6 +64,11 @@
 \begin{document}
 
 \maketitle % Print the title
+\begin{center}
+\Large{Profesor: Diego Fernando Vivas}
+\endcenter}
+
+\newpage
 
 %----------------------------------------------------------------------------------------
 %	PROBLEM 1
@@ -66,25 +76,25 @@
 
 \section{\normalfont{Use 10 rectángulos para aproximar el área de la región del plano $\textstyle{xy}$ limitada por $\textstyle{f(x)=2x+5}$, $\textstyle{x=0}$,  $\textstyle{x=2}$ y el eje  $\textstyle{x}$.}}
 
-\includegraphics{/Users/vivianamarquez/Desktop/konradIM2}
+%\includegraphics{/Users/vivianamarquez/Desktop/konradIM2.eps}
 
 \begin{center}
+$$\displaystyle{}$$
+$$\displaystyle{\includegraphics[width=100mm]{1}}$$
+$$\displaystyle{}$$
+$$\displaystyle{y=2(0)+5 \Rightarrow y=5}$$
+$$\displaystyle{y=2(2)+5 \Rightarrow y=9}$$
+$$\displaystyle{}$$
+$$\displaystyle{A\approx f(0.2)\cdot0.2+f(0.4)\cdot0.2+f(0.6)\cdot0.2+f(0.8)\cdot0.2+f(1.0)\cdot0.2}$$
+$$\displaystyle{+f(1.2)\cdot0.2+f(1.4)\cdot0.2+f(1.6)\cdot0.2+f(1.8)\cdot0.2+f(2.0)\cdot0.2}$$
 
-$\displaystyle{
-{$\textstyle{y=2(0)+5 \Rightarrow y=5\\}
-\textstyle{y=2(2)+5 \Rightarrow y=9}$}
-$$\textstyle{}$$
-{\textbf{GRÁFICA}}
-$$\textstyle{}$$
-{$\textstyle{A\approx f(0.2)\cdot0.2+f(0.4)\cdot0.2+f(0.6)\cdot0.2+f(0.8)\cdot0.2+f(1.0)\cdot0.2\\}
-\textstyle{+f(1.2)\cdot0.2+f(1.4)\cdot0.2+f(1.6)\cdot0.2+f(1.8)\cdot0.2+f(2.0)\cdot0.2}$}
 
 $$\textstyle{A\approx \Bigg[2\big[0.2+0.4+0.6+0.8+1.0+1.2+1.4+1.6+1.8+2.0\big]+(10\cdot5)\Bigg]\cdot0.2}$
 
 $$\textstyle{A\approx \Big[2\big[11\big]+(50)\Big]\cdot0.2}$
 
 $$\textstyle{A\approx 14.4}$
-}$
+
 
 \end{center}
 
@@ -95,13 +105,11 @@ $$\textstyle{A\approx 14.4}$
 \section{\normalfont{Use 10 rectángulos para aproximar el área de la región del plano $\textstyle{xy}$ limitada por $\textstyle{f(x)=2x^2-x-1}$, $\textstyle{x=2}$,  $\textstyle{x=5}$ y el eje  $\textstyle{x}$.}}
 
 \begin{center}
-
-$\displaystyle{
-
-{\textbf{GRÁFICA}}
-$$\textstyle{}$$
-$$\textstyle{\Delta x = \frac{(5-2)}{10}=0.3}$$
-$$\textstyle{}$$
+$$\displaystyle{}$$
+$$\displaystyle{\includegraphics[width=100mm]{2}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\Delta x = \frac{(5-2)}{10}=0.3}$$
+$$\displaystyle{}$$
 {$\textstyle{A\approx f(2.3)\cdot0.3+f(2.6)\cdot0.3+f(2.9)\cdot0.3+f(3.2)\cdot0.3+f(3.5)\cdot0.3\\}
 \textstyle{+f(3.8)\cdot0.3+f(4.1)\cdot0.3+f(4.4)\cdot0.3+f(4.7)\cdot0.3+f(5.0)\cdot0.3}$}
 $$\textstyle{}$$
@@ -113,7 +121,6 @@ $$\textstyle{}$$
 $\textstyle{A\approx 70.44}$
 
 
-}$
 
 \end{center}
 
@@ -140,6 +147,8 @@ $$\displaystyle{}$$
 $\displaystyle{{9\big[1+0\big]=9\\}}
 }$
 \end{center}	
+
+\newpage
 
 %----------------------------------------------------------------------------------------
 %	PROBLEM 4
@@ -274,7 +283,7 @@ $$\displaystyle{}$$
 
 \begin{center}
 
-{\textbf{\\GRÁFICA\\}}}
+$$\displaystyle{\includegraphics[width=80mm]{3}}$$
 $$\displaystyle{}$$
 $$\displaystyle{A=\lim_{n \to \infty}\sum_{i=1}^{n}A_i=\lim_{n \to \infty}\sum_{i=1}^{n}f(x_i^*)\Delta x_i}$$
 $$\displaystyle{}$$
