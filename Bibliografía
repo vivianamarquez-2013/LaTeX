@@ -1,0 +1,81 @@
+%% Cómo hacer una bibliografía en LaTeX
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[spanish]{babel} % English language/hyphenation
+
+\begin{document}
+
+\begin{thebibliography}{11}
+
+\bibitem[1]  {} P. Abate and R. GorÈ,
+\newblock{\em The Tableau Workbench},
+\newblock Electronic Notes in Theoretical Computer Science Vol. 231, 55-67 (2009).
+
+\bibitem[2]  {} A. d'AvilaGarcez, L.C. Lamb and, D.M. Gabbay,
+\newblock{\em Connectionist modal logic: Representing modalities in neuronal networks},
+\newblock Theoretical Computer Science, 371, 34-53, (2007).
+
+\bibitem[3]  {} E. Corchado and A. Herrero,
+\newblock{\em Neural visualization of network traffic data for intrusion detection},
+\newblock Applied Soft Computing. doi:10.1016/j.asoc.2010.07.002.
+
+\bibitem[4]  {} E. Corchado, A. Arroyo, and V. Tricio,
+\newblock{\em Soft computing models to identify typical meteorological days},
+\newblock Logic Journal of the IGPL, Press July 21, 2010. doi:10.1093/jigpal/jzq035.
+
+\bibitem[5]  {} M. Fitting,
+\newblock{\em Modal Proof Theory},
+\newblock in: P. Blackburn, J. vanBenthem, and F. Wolter(eds), Handbook of Modal Logic, Studies in Logic and Practical Reasoning, Volume 3, Elsevier, Amsterdam, 85-138 (2007).
+
+\bibitem[6]  {} O. Gasquet, A. Herzig, D. Longin, and M. Sahade,
+\newblock{\em Lotrec: Logical tableaux research engineering companion},
+\newblock Lecture Notes in Artificial Intelligence Vol. 3702, 318-322 (2005).
+
+\bibitem[7]  {} J. Golinska-Pilarek, E. MuÒoz-Velasco, and A. Mora,
+\newblock{\em A new deduction system for deciding validity in modal logic K},
+\newblock Logic Jnl of IGPL, doi:10.1093/jigpal/jzq033, (2010).
+
+\bibitem[8]  {} R. GorÈ and L. A. Nguyen,
+\newblock{\em Clausal Tableaux for Multimodal Logics of Belief},
+\newblock Fundamenta Informaticae, Vol. 94(1), 21-40 (2009).
+
+\bibitem[9]  {} I. Horrocks, U. Hustadt, U. Sattler, and R. Schmidt,
+\newblock{\em Computational Modal Logic},
+\newblock in: P. Blackburn, J. vanBenthem, and F. Wolter(eds), Handbook of Modal Logic, Studies in Logic and Practical Reasoning, Volume 3, Elsevier, Amsterdam, 181-245 (2007).
+
+\bibitem[10]  {} L. Lima, P. Novais, R. Costa, J. Bulas Cruz, and J. Neves,
+\newblock{\em Group decision making and Quality-of-Information in e-Health systems},
+\newblock Logic Jnl IGPL, doi:10.1093/jigpal/jzq029 (2010).
+
+\bibitem[11]  {} G. Mints,
+\newblock{\em Gentzen-type Systems and Resolution Rules},
+\newblock Lecture Notes in Computer Science Vol. 417, 198-231 (1988).
+
+\bibitem[12]  {} A. Mora, E. MuÒoz-Velasco, and J. Golinska-Pilarek,
+\newblock{\em Implementing a Relational Theorem Prover for Modal Logic K},
+\newblock to appear in Int. Jnl. of Computer Mathematics (2010).
+
+\bibitem[13]  {} E. Orlowska and J. Golinska-Pilarek,
+\newblock{\em Dual Tableaux: Foundations, Methodology, Case Studies},
+\newblock Trends in Logic 36, Springer Science, doi: 10.1007/978-94-007-0005-5-21, a book in print (2011).
+
+\bibitem[14]  {} H. Rasiowa and R. Sikorski,
+\newblock{\em On Gentzen theorem},
+\newblock Fundamenta Mathematicae 48, 57-69 (1960).
+
+\bibitem[15]  {} J. Sedano, L. Curiel, E. Corchado, E. de la Cal and J.R. Villar,
+\newblock{\em A soft computing method for detecting lifetime building thermal insulation failures},
+\newblock Integrated Computer-Aided Engineering 17 (2), 103-115, IOS Press (2010).
+
+\bibitem[16]  {} A.Tarski,
+\newblock{\em On the calculus of relations},
+\newblock Journal of Symbolic Logic 6, 73-89 (1941).
+
+\bibitem[17]  {} S. Yim, J.O. Wilson, D. W. Rosen
+\newblock{\em Development of an Ontology for Bio-Inspired Design using Description Logics},
+\newblock International Conference on Product Lifecycle Management 2008 (PLM08), Vol. 4, No. 1, 2008.
+
+\end{thebibliography}
+\end{document} 
