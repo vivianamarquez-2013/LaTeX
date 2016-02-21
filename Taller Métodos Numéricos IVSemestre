@@ -1,0 +1,318 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[spanish]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[makeroom]{cancel}
+
+\usepackage{pstricks-add}
+\usepackage{pgfplots}
+\usepackage[pdf]{pstricks}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{update} 
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\includegraphics[width=60mm]{k}
+\textsc{\\} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Métodos Numéricos\\ % The assignment title
+\huge Taller: 1, 2, 5, 10, 15, 26*
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Viviana Márquez \\Código: 614132005} % Your name
+
+\date{\normalsize\ \\ \\Miércoles, 05 de abril de 2015} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+\begin{center}
+\Large{Profesor: Alberto Forero}
+\endcenter}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Compute the absolute error and relative error in approximations of p by p*. }}
+
+%\includegraphics{/Users/vivianamarquez/Desktop/konradIM2.eps}
+
+\begin{center}
+$$\displaystyle{}$$
+$$\displaystyle{\includegraphics[width=100mm]{1}}$$
+$$\displaystyle{}$$
+$$\displaystyle{y=2(0)+5 \Rightarrow y=5}$$
+$$\displaystyle{y=2(2)+5 \Rightarrow y=9}$$
+$$\displaystyle{}$$
+$$\displaystyle{A\approx f(0.2)\cdot0.2+f(0.4)\cdot0.2+f(0.6)\cdot0.2+f(0.8)\cdot0.2+f(1.0)\cdot0.2}$$
+$$\displaystyle{+f(1.2)\cdot0.2+f(1.4)\cdot0.2+f(1.6)\cdot0.2+f(1.8)\cdot0.2+f(2.0)\cdot0.2}$$
+
+
+$$\textstyle{A\approx \Bigg[2\big[0.2+0.4+0.6+0.8+1.0+1.2+1.4+1.6+1.8+2.0\big]+(10\cdot5)\Bigg]\cdot0.2}$
+
+$$\textstyle{A\approx \Big[2\big[11\big]+(50)\Big]\cdot0.2}$
+
+$$\textstyle{A\approx 14.4}$
+
+
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Use 10 rectángulos para aproximar el área de la región del plano $\textstyle{xy}$ limitada por $\textstyle{f(x)=2x^2-x-1}$, $\textstyle{x=2}$,  $\textstyle{x=5}$ y el eje  $\textstyle{x}$.}}
+
+\begin{center}
+$$\displaystyle{}$$
+$$\displaystyle{\includegraphics[width=100mm]{2}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\Delta x = \frac{(5-2)}{10}=0.3}$$
+$$\displaystyle{}$$
+{$\textstyle{A\approx f(2.3)\cdot0.3+f(2.6)\cdot0.3+f(2.9)\cdot0.3+f(3.2)\cdot0.3+f(3.5)\cdot0.3\\}
+\textstyle{+f(3.8)\cdot0.3+f(4.1)\cdot0.3+f(4.4)\cdot0.3+f(4.7)\cdot0.3+f(5.0)\cdot0.3}$}
+$$\textstyle{}$$
+{$\textstyle{A\approx \bigg[2\big[2.3^2+2.6^2+2.9^2+3.2^2+3.5^2+3.8^2+4.1^2+4.4^2+4.7^2+5.0^2\big]}$}
+$\textstyle{-\big[2.3+2.6+2.9+3.2+3.5+3.8+4.1+4.4+4.7+5.0\big]-(10\cdot1)\bigg]\cdot0.3}$}
+$$\textstyle{}$$
+{$\textstyle{A\approx \bigg[2\big[140.65\big]-\big[36.5\big]-(10)\bigg]\cdot0.3}$}
+$$\textstyle{}$$
+$\textstyle{A\approx 70.44}$
+
+
+
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Halle:}}
+
+\begin{center}
+$\displaystyle{{{\lim_{n \to \infty}} \frac{18}{n^2} \Big[\frac{n(n+1)}{2}\Big]\\}}
+$$\displaystyle{}$$
+\large{Solución:}
+$$\displaystyle{}$$
+$\displaystyle{{{\lim_{n \to \infty}} \frac{18(n^2+n)}{2n^2}\\}}
+$$\displaystyle{}$$
+$\displaystyle{{9\Bigg[{\lim_{n \to \infty}} \frac{(n^2+n)}{n^2}\Bigg]\\}}
+$$\displaystyle{}$$
+$\displaystyle{{9\Bigg[\Big[{\lim_{n \to \infty}} \frac{n^2}{n^2}\Big]+\Big[{\lim_{n \to \infty}} \frac{n}{n^2}\Big]\Bigg]\\}}
+$$\displaystyle{}$$
+$\displaystyle{{9\Bigg[\cancelto{1}{\Big[{\lim_{n \to \infty}} 1\Big]}+\cancelto{0}{\Big[{\lim_{n \to \infty}}\frac{1}{n}\Big]}\Bigg]\\}}
+$$\displaystyle{}$$
+$\displaystyle{{9\big[1+0\big]=9\\}}
+}$
+\end{center}	
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Use las fórmulas de suma para reescribir la expresión sin la notación de suma. Use el resultado para hallar la suma cuando $\textstyle{n=10}$ y cuando $\textstyle{n=100}$.}}
+
+\begin{center}
+$\displaystyle{\sum_{i=1}^{n}\frac{2i+1}{n^2}}$
+$$\displaystyle{}$$
+\large{Solución:}
+$$\displaystyle{\frac{1}{n^2}\sum_{i=1}^{n}2i+1}$$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{1}{n^2}\Big[2\sum_{i=1}^{n}i+\sum_{i=1}^{n}1\Big]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{1}{n^2}\Big[\cancel{2}\bigg[\frac{n(n+1)}{\cancel{2}}\bigg]+n\Big]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{1}{n^2}\Big[\big[n(n+1)\big]+n\Big]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{1}{n^2}\Big[n^2+2n\Big]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{n^2+2n}{n^2}}$$
+$$\displaystyle{}$$
+$$\displaystyle{1+\frac{2}{n}}$$
+$$\displaystyle{}$$
+\large{Cuando $\textstyle{n=10}$ }\Rightarrow$\displaystyle{1+\frac{2}{10}}$\Rightarrow$\displaystyle{\frac{6}{5}}$
+$$\displaystyle{}$$
+\large{Cuando $\textstyle{n=100}$ }\Rightarrow$\displaystyle{1+\frac{2}{100}}$\Rightarrow$\displaystyle{\frac{51}{50}}$
+
+
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 5
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Use las fórmulas de suma para reescribir la expresión sin la notación de suma. Use el resultado para hallar la suma cuando $\textstyle{n=10}$ y cuando $\textstyle{n=100}$.}}
+
+\begin{center}
+$\displaystyle{\sum_{i=1}^{n}\frac{6k(k-1)}{n^3}}$
+$$\displaystyle{}$$
+\large{Solución:}
+$$\displaystyle{}$$
+$\displaystyle{\frac{6}{n^3}\sum_{i=1}^{n}k^2-k}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{6}{n^3}\Bigg[\sum_{i=1}^{n}k^2-\sum_{i=1}^{n}k\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{6}{n^3}\Bigg[{\frac{n(n+1)(2n+1)}{6}}-{\frac{n(n+1)}{2}}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{\cancel{6}}{n^3}\Bigg[{\frac{n(n+1)(2n+1)-3[n(n+1)]}{\cancel{6}}}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{1}{n^3}\bigg[{(n^2+n)(2n+1)-3(n^2+n)}\bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{1}{n^3}\bigg[{2n^3+\cancel{n^2}+\cancel{2n^2}-\cancel{3n^2}-3n}\bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\frac{1}{{n^3}}\bigg[{2n^3-2n}\bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{2-\frac{2}{n^2}}}$
+$$\displaystyle{}$$
+\large{Cuando $\textstyle{n=10}$ }\Rightarrow$\displaystyle{{2-\frac{2}{10^2}}}$\Rightarrow$\displaystyle{\frac{99}{50}}$
+$$\displaystyle{}$$
+\large{Cuando $\textstyle{n=100}$ }\Rightarrow$\displaystyle{{2-\frac{2}{100^2}}}$\Rightarrow$\displaystyle{\frac{9999}{5000}}$
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 6
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Encuentre una fórmula para la suma de los $\textstyle{n}$ términos. Use la fórmula para encontrar el límite cuando {$\textstyle{n}$ \to \infty}}}
+
+\begin{center}
+$\displaystyle{\lim_{n \to \infty}\sum_{i=1}^{n}\frac{1}{n^3}(i-1)^2}$
+$$\displaystyle{}$$
+\large{Solución:}
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{1}{n^3}}\sum_{i=1}^{n}(i-1)^2\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{1}{n^3}}\Big[\sum_{i=1}^{n}i^2-2i+1\Big]\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{1}{n^3}}\Big[\sum_{i=1}^{n}i^2-2\sum_{i=1}^{n}i+\sum_{i=1}^{n}1\Big]\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{1}{n^3}}\Big[{\frac{n(n+1)(2n+1)}{6}}-\cancel{2}\bigg({\frac{n(n+1)}{\cancel{2}}\bigg)+{n}\Big]\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{1}{n^3}}\Big[{\frac{(n^2+n)(2n+1)-6n^2-\cancel{6n}+\cancel{6n}}{6}}\Big]\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{2n^3+n^2+2n^2+n-6n^2}{6n^3}}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac{2n^3-3n^2+n}{6n^3}}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{\Bigg[{{\frac{2}{6}}\cancelto{1}{\lim_{n \to \infty}1}\Bigg]}-{\cancelto{0}{\Bigg[{{\frac{3}{6}}\lim_{n \to \infty}{\frac{1}{n}}\Bigg]}}+{\cancelto{0}{\Bigg[{{\frac{1}{6}}\lim_{n \to \infty}{\frac{1}{n^2}}\Bigg]}}}$
+$$\displaystyle{}$$
+$$\displaystyle{\frac{1}{3}}$$
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 7
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Encuentre una fórmula para la suma de los $\textstyle{n}$ términos. Use la fórmula para encontrar el límite cuando {$\textstyle{n}$ \to \infty}}}
+
+\begin{center}
+$\displaystyle{{\lim_{n \to \infty}\sum_{i=1}^{n}\Bigg(1+\frac{2i}{n}\Bigg)^2 \Bigg(\frac{2}{n}\Bigg)}$
+$$\displaystyle{}$$
+\large{Solución:}
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[\frac{2}{n}\sum_{i=1}^{n}\Bigg(1+\frac{2i}{n}\Bigg)^2\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[\frac{2}{n}\sum_{i=1}^{n}\Bigg(1+{\frac{4i}{n}}+{\frac{4i^2}{n^2}}\Bigg)\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[2+  {\frac{8}{n^2}}\sum_{i=1}^{n}i  +  {\frac{8}{n^3}}\sum_{i=1}^{n}i^2\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[2+{ {\frac{\cancelto{4}{8}}{n^\cancel{2}}} \Bigg( {\frac{\cancel{n}(n+1)}{\cancel{2}}} \Bigg) }+{ {\frac{\cancelto{4}{8}}{n^\cancelto{2}{3}}} \Bigg( {\frac{\cancel{n}(n+1)(2n+1)}{\cancelto{3}{6}}} \Bigg) }\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[2+{ {\frac{4n+4}{n}} }+{ {\frac{8n^2+12n+4}{3n^2}} }\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[\frac{6n^2+12n^2+12n+8n^2+12n+4}{3n^2}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[\frac{26n^2+24n+4}{3n^2}\Bigg]}$
+$$\displaystyle{}$$
+$\displaystyle{{\lim_{n \to \infty}\Bigg[ {\frac{26}{3}} + {\frac{8}{n}} + {\frac{4}{3n^2}}   \Bigg] = {\frac{26}{3}}}$
+$$\displaystyle{}$$
+%$\displaystyle{\Bigg[{{\frac{26}{3}}\cancelto{1}{\lim_{n \to \infty}1}\Bigg]}+{\cancelto{0}{\Bigg[{8}\lim_{n \to \infty}{\frac{1}{n}}\Bigg]}}+{\cancelto{0}{\Bigg[{{\frac{4}{3}}\lim_{n \to \infty}{\frac{1}{n^2}}\Bigg]}}}$
+%$$\displaystyle{}$$
+%$$\displaystyle{\frac{26}{3}}$$
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 8
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Use la metodología de la suma de Riemann y el cálculo del límite para hallar el área de la región en el plano $\textstyle{xy}$ acotada por $\textstyle{f(x)=x^3}$, el eje $\textstyle{x}$ y $\textstyle{x=2}$.}}
+
+\begin{center}
+
+$$\displaystyle{\includegraphics[width=80mm]{3}}$$
+$$\displaystyle{}$$
+$$\displaystyle{A=\lim_{n \to \infty}\sum_{i=1}^{n}A_i=\lim_{n \to \infty}\sum_{i=1}^{n}f(x_i^*)\Delta x_i}$$
+$$\displaystyle{}$$
+$$\displaystyle{\Delta x_i = \frac{b-a}{n} , a=0, b=2 \Rightarrow}$$
+$$\displaystyle{}$$
+$$\displaystyle{\Delta x_i =\frac{2-0}{n} = \frac{2}{n}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\sum_{i=1}^{n}f\Big(i\cdot{\frac{2}{n}}\Big)\cdot{\frac{2}{n}}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\sum_{i=1}^{n}\Big(i\cdot{\frac{2}{n}}\Big)^3\cdot{\frac{2}{n}}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\sum_{i=1}^{n}{\frac{8i^3}{n^3}}\cdot{\frac{2}{n}}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\sum_{i=1}^{n}{\frac{16i^3}{n^4}}}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac {16}{n^4}}\sum_{i=1}^{n}{i^3}\Bigg]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac {16}{n^4}}\cdot\Big({\frac{1}{4}}\cdot n^2 \cdot (n+1)^2 \Big)\Bigg]}$$
+$$\displaystyle{}$$
+$$\displaystyle{\lim_{n \to \infty}\Bigg[{\frac {\cancelto{4}{16}}{n^4}}\cdot\Big({\frac{n^4+2n^3+n^2}{\cancel{4}}}\Big)\Bigg]}$$
+$$\displaystyle{}$$
+$$\displaystyle{4\lim_{n \to \infty}\Bigg(1+{\frac{2}{n}+{\frac{1}{n^2}}}\Bigg)=4}$$
+$$\displaystyle{}$$
+\large{Área = 4 unidades cuadradas.}
+
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
