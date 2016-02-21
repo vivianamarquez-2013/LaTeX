@@ -1,0 +1,181 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[spanish]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[makeroom]{cancel}
+
+\usepackage{pstricks-add}
+\usepackage{pgfplots}
+\usepackage[pdf]{pstricks}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{update} 
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\includegraphics[width=60mm]{k}
+\textsc{\\} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Ecuaciones Diferenciales\\ % The assignment title
+\huge Taller de Métodos No. 1
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Laura Luis - Código: 614141004 \\Viviana Márquez - Código: 614132005} % Your name
+
+\date{\normalsize\ \\ \\Sábado, 20 de febrero de 2016} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+\begin{center}
+\Large{Profesora: Mariam Pinto}
+\endcenter}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{?`Puede una ecuación diferencial de primer orden ser a la vez de variable separable y exacta? Proponer ejemplo.}}
+%\includegraphics{/Users/vivianamarquez/Desktop/konradIM2.eps}
+
+\begin{center}
+
+{\normalfont{Partiendo del método de una ecuación exacta, si $M$ depende sólo de $y$ y $N$ depende solo de $x$ se puede simplificar el método al de variable separable.}}
+
+$$\displaystyle{}$$
+$\textbf{Ejemplo}$ 
+$$y{\mathrm{d}y}+x{\mathrm{d}x}=0$$
+
+$$\displaystyle{}$$
+Por el método de exacta: 
+$$\frac{\partial M}{\partial x} ? \frac{\partial N}{\partial y}$$
+$$\frac{\partial M}{\partial x} =0,  \frac{\partial N}{\partial x} = 0$$
+$$\frac{\partial M}{\partial x} = \frac{\partial N}{\partial y}\checkmark$$
+$$\int y{\mathrm{d}y}=\frac{1}{2}y^{2}+g(x)$$
+$$\frac{\partial }{\partial x}\bigg(\frac{1}{2}y^{2}+g(x)\bigg)=x$$
+$$\int g'(x)dx=\int xdx$$
+$$g(x)=\frac{1}{2}x^{2}$$
+$$C=\frac{1}{2}y^{2}+\frac{1}{2}x^{2}$$
+$$\frac{1}{2}y^{2}=-\frac{1}{2}x^{2}+C$$
+$$y=\pm\sqrt{-x^{2}+C} \textbf{ Eq.1}$$ 
+
+$$\displaystyle{}$$
+Por el método de variable separable: 
+$$y{\mathrm{d}y}=-x{\mathrm{d}x}$$
+$$\int y{\mathrm{d}y}=-\int x{\mathrm{d}x}$$
+$$\frac{1}{2}y^{2}=-\frac{1}{2}x^{2}+C$$
+$$y^{2}=-x^{2}+C$$
+$$y=\pm\sqrt{-x^{2}+C} \textbf{ Eq.2}$$
+
+$$\displaystyle{}$$
+ \text{ Eq.1} = \text{ Eq.2}\checkmark
+$$\displaystyle{}$$
+Con el ejemplo podemos ver que una ecuación si puede ser diferencial de primer orden y ser a la vez de variable separable y exacta.
+
+
+
+\end{center}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{\normalfont{Un dormitorio universitario aloja a 100 estudiantes, cada uno de los cuales es susceptible de contraer cierta infección viral. Un modelo matemático simple supone que durante el curso de una epidemia la tasa de cambio con respecto al tiempo del número de estudiantes contagiados $\textit{I}$, es proporcional al número de estudiantes contagiados por el número de estudiantes no contagiados, $100-\textit{I}$.}}
+
+\subsection{\normalfont{Si en el tiempo $\textit{t}=0$ un solo estudiante está contagiado, demuestre que el número de estudiantes contagiados en el tiempo $\textit{t}$ está dado por: $$I(t)=\frac{100e^{100kt}}{99+e^{100kt}}$$}}
+
+\subsection{\normalfont{Si la constante de proporcionalidad $\textit{k}$ tiene un valor de $0.01$ cuando $\textit{t}$ es medido en días, encuentre el tiempo para el cual estarán contagiados la mitad de los estudiantes.}}
+
+\begin{}
+$$\textbf{Solución}$$Escribimos el problema inicial de la tasa de cambio con respecto al tiempo del número de estudiantes contagiados. 
+$$\frac{\mathrm{d}I}{\mathrm{d}t}=kI(100-I)$$
+
+$$\displaystyle{}$$
+$\textbf{2.1}$ --- Tenemos que $I(0)=1$.\\Entonces vamos a aplicar el método de variables separables.
+
+$${\mathrm{d}I}=kI(100-I){\mathrm{d}t}$$
+$$\frac{1}{I(100-I)}{\mathrm{d}I}=k{\mathrm{d}t}$$
+$$M(I)=\frac{1}{I(100-I)}$$
+$$N(I)=k$$
+$$\displaystyle{}$$
+Por fracciones parciales: 
+$$\frac{1}{I(100-I)}=\frac{1}{100I}+\frac{1}{100(100-I)}=\frac{1}{100}\bigg(\frac{1}{I}+\frac{1}{100-I}\bigg)$$
+$$\frac{1}{100}\int \bigg(\frac{1}{I}+\frac{1}{100-I}\bigg){\mathrm{d}I}=\int k{\mathrm{d}t}$$
+$$\ln I -\ln (100-1)= 100kt+C$$
+$$\ln\bigg(\frac{I}{100-I}\bigg)= 100kt+C$$
+$$\frac{I}{100-I}= e^{100kt}\cdot e^{C}$$
+$$\displaystyle{}$$
+Tomando la condición inicial $I(0)=1$:
+$$\frac{1}{100-1}= e^{100k(0)}\cdot e^{C}$$
+$$\frac{1}{99}= e^{C}$$
+$$\displaystyle{}$$
+Por lo tanto:
+$$ \frac{I}{100-I}=  \frac{1}{99}e^{100kt}$$
+$$I=  \frac{100-I}{99}e^{100kt}$$
+$$I= \bigg( \frac{100}{99}-\frac{I}{99}\bigg)e^{100kt}$$
+$$\frac{I}{e^{100kt}}= \frac{100}{99}-\frac{I}{99}$$
+$$\frac{I}{e^{100kt}}+\frac{I}{99}= \frac{100}{99}$$
+$$99I+(e^{100kt})I= 100e^{100kt}$$
+$$I(t)= \frac{100e^{100kt}}{99+e^{100kt}}\checkmark$$
+
+$$\displaystyle{}$$
+$\textbf{2.2}$ --- Si $k=0.001$.\\La mitad de 100 estudiantes son 50.
+$$\displaystyle{}$$
+$$50= \frac{100e^{100(\frac{1}{100})t}}{99+e^{100(\frac{1}{100})t}}$$
+$$50= \frac{100e^{t}}{99+e^{t}}$$
+$$4950 + 50e^{t} = 100e^{t}$$
+$$100e^{t}- 50e^{t} = 4950 $$
+$$50e^{t} = 4950 $$
+$$e^{t} = 99$$
+$$t = \ln (99)$$
+$$t \approx  4.59511985$$
+$$\displaystyle{}$$
+En menos de cinco días estarán contagiados la mitad de los estudiantes.
+
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
